@@ -1,0 +1,9 @@
+services:
+  usm_checker:
+    build:
+      context: ${USERSIDE_BASE_DIR}/usm_checker
+    volumes:
+      - ${USERSIDE_BASE_DIR}/usm_checker/module:/app
+      - ${USERSIDE_BASE_DIR}/usm_checker/log:/var/log/userside/usm_checker
+    networks:
+      - internal
